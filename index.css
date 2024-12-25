@@ -111,13 +111,16 @@ header,
     margin-bottom: 32px;
 }
 
+/* feature-image's parent container */
 .section-two-image-container {
     display: flex;
+    /* overflow: hidden; */
     justify-content: space-between;
 }
 
 .feature-image {
-    width: 310px;
+    /* width: 100%; images get distorted and overflow */
+    width: 48%;
     border-radius: 4.6px;
 }
 
