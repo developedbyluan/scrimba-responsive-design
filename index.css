@@ -84,6 +84,7 @@ a:active {
 
 /* ----- LAYOUT ----- */
 
+
 header, 
 section, 
 footer {
@@ -100,8 +101,9 @@ header,
 }
 
 .container {
-    width: 640px;
+    width: 90%;
     margin: 0 auto;
+    border: 2px solid tomato;
 }
 
 .main-image {
