@@ -142,7 +142,7 @@ then I convert the font-size of .btn from px to em, from 18px to 1.125em.
 >  2. Convert the bottom-margin of .main-image from px to em
 
 
-##### An `em` value can compound from one level to the other
+##### An `em` value can compound from one level to the other (commit `1be6a38`)
 https://scrimba.com/the-frontend-developer-career-path-c0j/~0iu
 
 > Whenever you have nested elements with font-size set in `em`, the value can compound from one level to the other.
@@ -158,3 +158,46 @@ Here's a quick example:
         </div>
     </section>
 ```
+
+```css
+.section-zero {
+    background-color: darkorchid;
+    color: white;
+    font-size: 10px;
+}
+
+.heading {
+    font-size: 2em; /* 20px */
+}
+
+
+/* Set font-size value for the parent of .heading element */
+.child {
+    font-size: 2em; /* 20px */
+}
+```
+
+The .heading's font-size no longer has value of 20px but 2 times of its parent (2em * 10px).
+
+=> Use `em` unit on font-size creates compound effect from one level to another.
+
+=> To solve this cascading compound effect, introducing rem unit.
+
+#### REM
+An rem unit is always relative to the root <html> element and ignores the font-size of its parent element or any other ancestor element.
+```css
+html {
+    font-size: 20px;
+}
+```
+
+Change `em` to `rem` is straightforward. Except for .subheading, which is a child of h1 element, since change it to rem, it ignores the h1 element's font-size, and uses the root html element's font-size. So to get the font-size of .subheading to be 20px, we need to set the font-size of .subheading to 1.25rem (20/16, not 20/36 any more), not changing it from 0.55em to 0.55rem like other elements.
+```css 
+.subheading {
+    display: block;
+    /* font-size: 20px; */
+    font-size: 1.25rem;
+    color: #d0aaff;
+}
+```
+
