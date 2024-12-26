@@ -42,6 +42,11 @@
 
 > Note: I create a javascript code snippet to display the image's width in the `main-image-size-display` span element.
 
+> Update: I don't use min-width on elements most of the time. Why? 
+> - min-width is a good choice for elements that should never shrink below a certain width.
+> - But it's not as flexible as max-width, which allows for more dynamic resizing.
+> - For example, if you have an image which never shrinks below 320px (min-width: 320px), in case of the screen is less than 320px, the image will overflow, unless you clip it using `overflow: hidden` on the parent element.
+
 #### The `em` unit (commit `85565f8`)
 
 The em unit is like a chameleon in CSS – it changes its reference point based on context!
