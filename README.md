@@ -249,3 +249,22 @@ citation: https://stackoverflow.com/questions/19032484/css-inspecting-line-heigh
 <p><span style="border: 1px solid red; display: inline-block; line-height: 1.5; writing-mode: vertical-rl;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span> World</p>
 ```
 
+#### How I decide which unit to use?
+`px, %, em, rem, unitless`
+1. Font sizes:
+    - Use rem to avoid compound effect from one level to another.
+2. Margin and padding: 
+    - Use em
+    - Proportional scaling (resize)
+    - Based on element's current font-size
+    - Works great when setting margin on heading and paragraph elements.
+3. Line height:
+    - Use unitless value
+4. Width:
+    - Use %
+    - Flexible containers
+    - Flexible images
+5. Max-width:
+    - Use px
+    - Easier to manage
+    - Ensure consistency: it looks the same on any device and different screen sizes. The width doesn't exceed even on the largest screen.
