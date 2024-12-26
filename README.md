@@ -29,7 +29,7 @@
 
 > Note: the width of the child element is relative to the available amount of space in the parent element.
 
-###  Set width constraint with max-width
+##### Set width constraint with max-width (commit `84a1e07`)
 
 -   While setting a container's width to 90% of its parent helps with responsiveness, there's a catch! As the viewport (the parent) grows wider, your text lines become uncomfortably long, making content harder to read. That's where max-width comes to the rescue!
 -   By limiting the container to 800 pixels, we create an optimal reading experience across all screen sizes.
@@ -41,3 +41,58 @@
 - But wait – there's a plot twist! When we try to center it using margin: 0 auto, nothing happens. Why? Because images are born as inline elements – they're literally designed to flow with text! They ignore margins and don't naturally expand to their parent's width. This is why we need that powerful display: block declaration to make our centering dreams come true.
 
 > Note: I create a javascript code snippet to display the image's width in the `main-image-size-display` span element.
+
+#### The `em` unit
+
+The em unit is like a chameleon in CSS – it changes its reference point based on context!
+
+-   When you're using it for spacing properties like padding and margin, it looks at the current element's font size and says "That's my guide!"
+-   But here's the plot twist – when you use it for font-size itself, it looks up to the direct parent element and says "That's my reference point!"
+
+Here's a quick example:
+```html
+<div class="parent">
+    <div class="child">
+        <p>Hello, world!</p>
+    </div>
+</div>
+```
+```css
+.parent {
+    font-size: 20px;        /* Base size */
+}
+.child {
+    font-size: 0.5em;       /* 20px × 0.5 = 10px */
+    padding: 1em;           /* 10px × 1 = 10px (based on its own font-size) */
+    margin-bottom: 1.5em;   /* 10px × 1.5 = 15px */
+}
+.parent p { /* specificity: */
+    font-size: 1em; /* 10px × 1 = 10px */
+}
+```
+
+##### Absolute units are bad for responsive design and accessibility 
+- ... because they don't adapt to the screen size.
+- When you hard-code your website's font sizes and spacing using absolute units like pixels, you're essentially telling your users, "Sorry, your browser preferences don't matter!" If a user changes their default font size from 16px to 20px (perhaps due to vision needs), your website remains stubbornly fixed – creating potential accessibility barriers and a frustrating user experience. The last resort for users is to use the browser's zoom feature, which can be a pain.
+
+
+> Side note: What about the direct parent of a child element (already have a font-size set) have no font-size set?
+>
+> The child element will look for the nearest parent element with a font-size set. If no parent element has a font-size set, the child element will use the default font-size of the browser, which is 16px.
+```html
+<div class="parent">
+    <div class="child">
+        <p class="hello">Hello, world!</p>
+    </div>
+</div>
+```
+```css
+.parent {
+    font-size: 20px;
+}
+.child {
+}
+.hello {
+    font-size: 1em; /* 20px (parent's font-size) × 1 = 20px */
+}
+```
