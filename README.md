@@ -42,7 +42,7 @@
 
 > Note: I create a javascript code snippet to display the image's width in the `main-image-size-display` span element.
 
-#### The `em` unit
+#### The `em` unit (commit `85565f8`)
 
 The em unit is like a chameleon in CSS – it changes its reference point based on context!
 
@@ -96,3 +96,28 @@ Here's a quick example:
     font-size: 1em; /* 20px (parent's font-size) × 1 = 20px */
 }
 ```
+
+
+Pay attention:
+```css
+h1 {
+    font-size: 2.25em;
+}
+.subheading {
+    font-size: 1.25em;
+}
+```
+```html
+<h1>Hello, world! <span class="subheading">Subheading</span></h1>
+```
+
+You set .subheading font-size to 1.25em, thinking the result will be 20px. But wait! What actually happens is mind-blowing:
+
+html: 16px
+body: 16px (inherited from the root/html element)
+h1: 16px × 2.25 = 36px
+.subheading: 36px × 1.25 = 45px
+
+because, with the `em` unit, the .subheading element is a child of the h1 element, it will use the h1 element's font-size as its reference point.
+
+Suddenly, your nested elements are growing exponentially – like a snowball rolling down a hill!
