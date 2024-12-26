@@ -1,3 +1,14 @@
+:root {
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     color: #2b283a;
     font-family: 'Roboto', sans-serif;
@@ -102,13 +113,17 @@ header,
 
 .container {
     width: 90%;
+    max-width: 800px;
     margin: 0 auto;
     border: 2px solid tomato;
 }
 
 .main-image {
     width: 100%;
-    margin-bottom: 32px;
+    max-width: 600px;
+    /* margin-bottom: 32px; */
+    display: block;
+    margin: 0 auto 32px;
 }
 
 /* feature-image's parent container */
