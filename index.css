@@ -68,11 +68,15 @@ a:active {
 }
 
 .btn {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 1.125em;
     font-weight: 500;
     text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    padding: 0.5em 1em;
+    margin-right: 0.5em; /* for wide screens where buttons are side by side */
+    margin-bottom: 1em; /* for small screens where buttons are stacked vertically */
     border-radius: 4.6px;
 }
 
@@ -103,7 +107,8 @@ a:active {
 header, 
 section, 
 footer {
-    padding: 46px 0;
+    /* padding: 46px 0; */
+    padding: 2.875em 0;
 }
 
 header, 
@@ -127,7 +132,7 @@ header,
     max-width: 600px;
     /* margin-bottom: 32px; */
     display: block;
-    margin: 0 auto 32px;
+    margin: 0 auto 2em;
 }
 
 /* feature-image's parent container */

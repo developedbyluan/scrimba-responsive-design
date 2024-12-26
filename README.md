@@ -98,7 +98,7 @@ Here's a quick example:
 ```
 
 
-Pay attention:
+##### Pay attention: `commit: 467900f`
 ```css
 h1 {
     font-size: 2.25em;
@@ -121,3 +121,22 @@ h1: 16px × 2.25 = 36px
 because, with the `em` unit, the .subheading element is a child of the h1 element, it will use the h1 element's font-size as its reference point.
 
 Suddenly, your nested elements are growing exponentially – like a snowball rolling down a hill!
+
+
+##### Margins and Padding (commit `9ce7a6c`)
+when using `em` units for margins and padding, the value is relative to the current element's font-size.
+
+>  Challenge:
+>   1. Convert the padding value of .btn from px to em
+>   2. Space buttons both horizontally and vertically using margins and em units
+>   3. Convert the font-size of .btn from px to em
+
+for button's/links decorated as buttons' paddings, top and bottom are set to a half of the font-size (0.5em), and left and right are set to the font-size (1em). In this case 1/2 em of 18px
+
+for button's/links decorated as buttons' margins, top and bottom are set to the font-size (1em), and left and right are set to half of the font-size (0.5em). In this case 1 em of 18px
+
+then I convert the font-size of .btn from px to em, from 18px to 1.125em.
+
+> Challenge:
+>  1. Convert the padding of header, section, and footer from px to em
+>  2. Convert the bottom-margin of .main-image from px to em
