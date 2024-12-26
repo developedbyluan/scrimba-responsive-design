@@ -201,3 +201,51 @@ Change `em` to `rem` is straightforward. Except for .subheading, which is a chil
 }
 ```
 
+##### Line height
+- Line height property is used to set the height of the line box. It adds space above and below the text in horizontal writing mode and left and right space in vertical writing mode.
+
+- When an element is set to `line-height: 2`, it means the line height will be 2 times the element's font size. Let's visualize this! (line-height is inherited from the parent element if no line-height is set on the element itself.)
+```css
+p {
+    font-size: 16px;
+    line-height: 2; /* 16px * 2 = 32px */
+}
+```
+
+- highly recommended to use unitless line height value. Why?
+```css
+/* ❌ Using units */
+.parent {
+    font-size: 16px;
+    line-height: 32px;    /* Fixed at 32px */
+}
+.child {
+    font-size: 32px;      /* Still has 32px line-height - looks cramped! */
+}
+
+/* ✅ Using unitless */
+.parent {
+    font-size: 16px;
+    line-height: 2;       /* 2 times the font-size */
+}
+.child {
+    font-size: 32px;      /* Gets 64px line-height (2 × 32px) - properly scaled! */
+}
+```
+> Note: line-height is inherited from the parent element if no line-height is set on the element itself.
+
+> Rule of thumbs: Set line-height at 1.5 times the font-size (150%).
+
+
+
+- Use this code snippet to visualize the line height.
+citation: https://stackoverflow.com/questions/19032484/css-inspecting-line-height-in-browsers
+```html
+<p><span style="border: 1px solid red; display: inline-block; line-height: 1.5;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span> World</p>
+```
+
+- Change text to vertical writing mode.
+```html
+<p><span style="border: 1px solid red; display: inline-block; line-height: 1.5; writing-mode: vertical-rl;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span> World</p>
+```
+
