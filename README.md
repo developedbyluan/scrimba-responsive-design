@@ -140,3 +140,21 @@ then I convert the font-size of .btn from px to em, from 18px to 1.125em.
 > Challenge:
 >  1. Convert the padding of header, section, and footer from px to em
 >  2. Convert the bottom-margin of .main-image from px to em
+
+
+##### An `em` value can compound from one level to the other
+https://scrimba.com/the-frontend-developer-career-path-c0j/~0iu
+
+> Whenever you have nested elements with font-size set in `em`, the value can compound from one level to the other.
+
+Here's a quick example:
+```html
+    <section class="section-zero"> <!-- 10px -->
+        <div class="parent">
+            <div class="child">
+                <h1 class="heading">Name</h1> <!-- 20px -->
+                <p class="title">Title</p>
+            </div>
+        </div>
+    </section>
+```
