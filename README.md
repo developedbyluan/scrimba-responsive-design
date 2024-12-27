@@ -241,18 +241,16 @@ p {
 
 > Rule of thumbs: Set line-height at 1.5 times the font-size (150%).
 
+> Read more: https://css-tricks.com/how-to-tame-line-height-in-css/
+> Fun: https://css-tricks.com/fun-line-height/
 
 
 - Use this code snippet to visualize the line height.
-citation: https://stackoverflow.com/questions/19032484/css-inspecting-line-height-in-browsers
+> Source: https://stackoverflow.com/questions/19032484/css-inspecting-line-height-in-browsers
 ```html
 <p><span style="border: 1px solid red; display: inline-block; line-height: 1.5;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span> World</p>
 ```
 
-- Change text to vertical writing mode.
-```html
-<p><span style="border: 1px solid red; display: inline-block; line-height: 1.5; writing-mode: vertical-rl;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span> World</p>
-```
 
 #### How I decide which unit to use?
 `px, %, em, rem, unitless`
@@ -280,7 +278,7 @@ You can use media queries to apply different styles to different screen sizes. (
 
 - Think media queries as conditional statements in CSS.
 
-For example, if the screen width is greater than 768px, apply different styles to the layout. Else, ignore the styles in the media query.
+For example, if the screen width is greater than or equal to 375px (min-width: 375px), apply different styles to the layout. Else, ignore the styles in the media query.
 https://codepen.io/fireantx/pen/JoPyKJL?editors=0111
 /*
  Challenge: 
@@ -289,6 +287,7 @@ https://codepen.io/fireantx/pen/JoPyKJL?editors=0111
 */
 
 ```css
+/* the minimum width of the browser to apply the styles */
 @media (min-width: 375px) {
     /* styles for large screens */
     body {
@@ -309,11 +308,32 @@ https://codepen.io/fireantx/pen/JoPyKJL?editors=0111
 
 I can also use:
 ```css
-@media (max-width: 375px and min-width: 768px) {
+@media (min-width: 375px and max-width: 768px) {
     /* styles for small screens */
 }
 ```
 
-ref:
+Read more:
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+
+## Add media queries to the site
+> Note: In small screen, if I set the parent element to display flex, the images will stretch to the full width of the container by default without me setting the width of the images to 100%, and remain responsive within the container, until I set the parent's element align-items to center, images act unexpectedly.
+
+```css
+.section-two-image-container {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.feature-image {
+    /* width: 100%; */
+    border-radius: 4.6px;
+}
+```
+
+## Think Mobile First

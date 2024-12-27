@@ -140,16 +140,44 @@ header,
 .section-two-image-container {
     display: flex;
     /* overflow: hidden; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    flex-direction: column;
+    /* gap: 1em; */
 }
 
 .feature-image {
     /* width: 100%; images get distorted and overflow */
-    width: 48%;
+    /* width: 48%; */
+    /* width: 100%; */
     border-radius: 4.6px;
+    margin-bottom: 1em;
 }
 
 footer {
     text-align: center;
     color: #5f29a3;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+/*
+  Challenge:
+    1. Create a media query that targets a browser width
+       of 480px or wider
+    2. Within the media query, select .section-two-image-container
+       and add the flexbox property to display the images on the same row
+    3. Inside the media query, select .feature-image and 
+       add the fluid width for wider screens only
+*/
+
+@media (min-width: 480px) {
+    .section-two-image-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feature-image {
+        width: 48%;
+    }
 }
