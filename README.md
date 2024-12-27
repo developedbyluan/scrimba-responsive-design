@@ -395,3 +395,19 @@ Why?
 */
 
 In mobile first css thinking, each element should take up the full width of the container by default (display: block).
+
+## Adjust font size for smaller screens
+/*
+  Challenge: Responsive text
+    - h1:
+        - Initial size: rem value equal to 28px (1.75rem) 
+        - At 768px: increase to  36px (2.25rem)
+    - h2:
+        - Initial size: rem value equal to 22px (1.375rem)
+        - At 768px: increase to 28px (1.75rem)
+    - .subheading:
+        - Initial size: suitable for smaller screens
+        - At 768px: increase to 1.25rem  
+    - Paragraphs:
+        - At 768px: increase to rem value equal to 18px
+*/
