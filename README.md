@@ -370,3 +370,14 @@ Here's the game-changing insight: when you build mobile-first, you're not just a
   - remove the parent container of feature-image
   - add the width of feature-image to 100%
   - in media query, add display flex to the parent container of feature-image, remove flex-direction: row (flex container default is row)
+
+  ## Mobile-First also means Content First
+  - Display the content users need on mobile devices and nothing extra.
+  - For example, get rid of extra spaces.
+  /*
+    1. Create a new media query that targets a browser width of 768px or wider. 
+    2. Within the media query, select the header, section, and footer elements
+       and apply a top and bottom padding of 2.875em.
+    3. Adjust the initial padding for the header, section and footer elements.
+       Set a top and bottom padding value in em equal to 20px.
+*/
