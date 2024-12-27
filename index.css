@@ -177,13 +177,12 @@ footer {
 }
 
 /* list has default display of block, which is logical, because it needs to take up the full width of the container ul */
-.nav-list li {
-    text-align: center;
-}
+/* .nav-list li {
+} */
 
-.nav-list li:not(:last-child) {
-    border-bottom: 1px dashed white;
-}
+/* .nav-list li:not(:last-child) {
+    border-bottom: 1px dashed #a190b6;
+} */
 
 /* ----- MEDIA QUERIES ----- */
 
@@ -229,5 +228,19 @@ footer {
     p {
         /* font-size: 18px; */
         font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 1em;
+    }
+
+    .nav-list li:not(:last-child) {
+        border-bottom: 1px dashed #a190b6;
     }
 }

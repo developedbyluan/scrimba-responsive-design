@@ -413,3 +413,40 @@ In mobile first css thinking, each element should take up the full width of the 
 */
 
 ## Create a mobile-first navigation
+-
+
+-
+
+/*
+  Challenge: Write initial nav styles
+    1. Center-align the header content
+    2. Apply a top margin to the nav element to create space
+       between the nav and subheading
+    3. Make sure that the center alignment, the nav’s top margin,
+       and dotted borders between links display only on viewport widths
+       narrower than 768px
+*/
+
+This challenge is a great example of how to think mobile first css.
+I used to think that mobile first css is about using min-width to apply styles to smaller screens all the time and ignore max-width.
+
+However, with this example, I learned that mobile first css is all about take advantage of the default styles of elements to make mobile-first design. AND avoid repeating the code, in this case, if I set these style in the @media (max-width: 767px) out of the media query, on mobile first css, I have changed the default styles of the elements, which is not a good practice. If I did it, I need to come to @media (min-width: 768px) (on larger screens) to reset the styles back to the default styles, like this:
+```css
+@media (min-width: 768px) {
+    /* existing styles */
+
+    header {
+        text-align: left;
+    }
+
+    .nav {
+        margin-top: 0;
+    }
+
+    .nav-list li {
+        border-bottom: none;
+    }
+}
+```
+
+So, in this case, max-width comes into rescue.
