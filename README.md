@@ -381,3 +381,17 @@ Here's the game-changing insight: when you build mobile-first, you're not just a
     3. Adjust the initial padding for the header, section and footer elements.
        Set a top and bottom padding value in em equal to 20px.
 */
+
+## Adapt the buttons for smaller screens
+Why?
+- Because on mobile devices, users interacts with buttons and links via touch events.
+- So the buttons and links should be large enough to be easily accessible vs. the precise click of the mouse cursor on laptop or desktop.
+
+/*
+  Challenge:
+    - On narrow screens, each button should take up the full width
+      of their container 
+    - The buttons should display on the same row only at the 768px breakpoint
+*/
+
+In mobile first css thinking, each element should take up the full width of the container by default (display: block).
