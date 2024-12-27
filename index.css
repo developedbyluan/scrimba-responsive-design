@@ -229,6 +229,31 @@ footer {
         /* font-size: 18px; */
         font-size: 1.125rem;
     }
+
+    /* NAVIGATION */
+    .desktop-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: flex-end;
+        border: 1px solid red;
+    }
+
+    .nav-link {
+        margin-left: 2em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
 }
 
 @media (max-width: 767px) {

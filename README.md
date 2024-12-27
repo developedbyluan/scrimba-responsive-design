@@ -450,3 +450,15 @@ However, with this example, I learned that mobile first css is all about take ad
 ```
 
 So, in this case, max-width comes into rescue.
+
+
+## Mobile-first nav: Wider screens
+/*
+  Challenge: Navigation styles for wider screens
+    1. Use flexbox to display the navigation horizontally
+       on one row when the screen is 768px or wider
+    2. Align the nav with the right edge of its container
+    3. Apply space between each link with a margin
+    4. On wider screens, all of the content inside the header
+       should be vertically centered
+*/
