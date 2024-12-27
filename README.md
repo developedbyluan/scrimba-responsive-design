@@ -273,3 +273,47 @@ citation: https://stackoverflow.com/questions/19032484/css-inspecting-line-heigh
     - Use px
     - Easier to manage
     - Ensure consistency: it looks the same on any device and different screen sizes. The width doesn't exceed even on the largest screen.
+
+
+## Media queries
+You can use media queries to apply different styles to different screen sizes. (modify layout design based on different screen size)
+
+- Think media queries as conditional statements in CSS.
+
+For example, if the screen width is greater than 768px, apply different styles to the layout. Else, ignore the styles in the media query.
+https://codepen.io/fireantx/pen/JoPyKJL?editors=0111
+/*
+ Challenge: 
+   - Create a media query that targets a minimum browser width of 375px (375px is called breakpoint)
+   - In the media query, update the body's color and background
+*/
+
+```css
+@media (min-width: 375px) {
+    /* styles for large screens */
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+```
+
+- Breakpoints are the points where the layout design changes:
+    - Change layout design based on different screen size
+    - Update text size
+    - Page adjustments
+
+I can also use:
+```css
+@media (max-width: 375px and min-width: 768px) {
+    /* styles for small screens */
+}
+```
+
+ref:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
