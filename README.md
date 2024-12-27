@@ -364,3 +364,9 @@ Why This Approach Works:
 - Performance improves because you're loading only what's needed
 
 Here's the game-changing insight: when you build mobile-first, you're not just adapting to different screen sizes - you're creating a more focused, user-centered experience from the ground up.
+
+## Mobile-First CSS in Action
+- Look at how we use less code to achieve the same result.
+  - remove the parent container of feature-image
+  - add the width of feature-image to 100%
+  - in media query, add display flex to the parent container of feature-image, remove flex-direction: row (flex container default is row)

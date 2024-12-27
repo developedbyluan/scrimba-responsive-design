@@ -136,20 +136,9 @@ header,
     margin: 0 auto 2em;
 }
 
-/* feature-image's parent container */
-.section-two-image-container {
-    display: flex;
-    /* overflow: hidden; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    flex-direction: column;
-    /* gap: 1em; */
-}
-
 .feature-image {
-    /* width: 100%; images get distorted and overflow */
-    /* width: 48%; */
-    /* width: 100%; */
+    width: 100%;
+    height: auto;
     border-radius: 4.6px;
     margin-bottom: 1em;
 }
@@ -173,7 +162,7 @@ footer {
 
 @media (min-width: 480px) {
     .section-two-image-container {
-        flex-direction: row;
+        display: flex;
         justify-content: space-between;
     }
 
