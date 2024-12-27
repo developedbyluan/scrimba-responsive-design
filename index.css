@@ -167,9 +167,18 @@ footer {
     list-style-type: none;
 }
 
+/* link has default display of inline, which is logical, because it's flow with the text */
 .nav-link {
     color: white;
     text-decoration: none;
+    font-size: 1.125rem; /* 18px */
+    padding: 1.25em 0; /* put this decoration here to look for the current font size */
+    display: block; /* to apply padding to the link, since by default it's inline which doesn't respect padding defined above */
+}
+
+/* list has default display of block, which is logical, because it needs to take up the full width of the container ul */
+.nav-list li {
+    text-align: center;
 }
 
 .nav-list li:not(:last-child) {
