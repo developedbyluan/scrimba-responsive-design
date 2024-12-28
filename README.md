@@ -492,3 +492,14 @@ If I set a fixed width to `image-container` and shrink down the window size, the
 
 ### flex-wrap
 To fix this behavior, I can set `flex-wrap: wrap;` to the `image-container`.
+
+### Use with flex-wrap
+At the moment, when the `image-container` shinks or grows, there's some white space on the right side of the container.
+To fix this, I can set `flex-grow: 1;` to the `random-image`.
+ ```css
+ flex-basis: 220px;  /* Sets the initial/base size before remaining space is distributed, it's similar to width: 220px; */
+ 
+ flex-grow: 1; /* Determines how much the item will grow relative to other flex items when there is extra space. All items with flex-grow: 1 will get an equal portion of extra space */
+ ```
+
+In case of `flex-shrink: 0;`, it means the `random-image` will not shrink when the `image-container` shrinks. The minimum width of the `random-image` is 220px.
