@@ -503,3 +503,13 @@ To fix this, I can set `flex-grow: 1;` to the `random-image`.
  ```
 
 In case of `flex-shrink: 0;`, it means the `random-image` will not shrink when the `image-container` shrinks. The minimum width of the `random-image` is 220px.
+
+
+## Wrap featured items (parent of feature-image) with flexbox
+/*
+  Challenge: Wrap the feature-item divs with flexbox
+    1. Each .feature-item should grow from an initial main size of 220px
+    2. Allow the items inside .section-two-image-container to
+       wrap onto multiple lines
+    3. Apply a gap between each .feature-item
+*/
