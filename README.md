@@ -462,3 +462,12 @@ So, in this case, max-width comes into rescue.
     4. On wider screens, all of the content inside the header
        should be vertically centered
 */
+
+
+## Viewport Meta Tag
+> https://www.youtube.com/watch?v=SElOdK2qTpI
+```html
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+```
