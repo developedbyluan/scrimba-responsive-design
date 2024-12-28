@@ -486,3 +486,6 @@ Starter code:
 ```
 - Set `line-height: 0;` to remove the space between the images. Why does images have space between them? Because the images are inline elements, and inline elements have space between them, it's like text.
 
+- Set the `image-container` to display: flex
+Test: 
+If I set a fixed width to `image-container` and shrink down the window size, the images will overflow the container instead of shrinking down to fit the container or wrap to the next line.

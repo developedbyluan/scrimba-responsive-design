@@ -17,10 +17,12 @@ body {
 
 /* ----- TESTING IMAGE FLEXBOX GRID ----- */
 .image-container {
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
     line-height: 0;
     border: 1px solid tomato;
+
+    display: flex;
 }
 
 .random-image {
