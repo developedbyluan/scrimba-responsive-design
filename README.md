@@ -475,7 +475,7 @@ So, in this case, max-width comes into rescue.
 ## Create a Flexbox Image Grid
 > rewatch the challenge: https://scrimba.com/the-frontend-developer-career-path-c0j/~0jg
 
-Starter code:
+### Starter code:
 ```css
 .image-container {
     max-width: 800px;
@@ -489,3 +489,6 @@ Starter code:
 - Set the `image-container` to display: flex
 Test: 
 If I set a fixed width to `image-container` and shrink down the window size, the images will overflow the container instead of shrinking down to fit the container or wrap to the next line.
+
+### flex-wrap
+To fix this behavior, I can set `flex-wrap: wrap;` to the `image-container`.

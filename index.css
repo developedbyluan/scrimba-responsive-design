@@ -17,16 +17,18 @@ body {
 
 /* ----- TESTING IMAGE FLEXBOX GRID ----- */
 .image-container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     line-height: 0;
     border: 1px solid tomato;
 
     display: flex;
+    flex-wrap: wrap;
 }
 
 .random-image {
-    width: 220px;
+    /* width: 220px; */
+    flex-basis: 220px;
 }
 
 .random-image img {
