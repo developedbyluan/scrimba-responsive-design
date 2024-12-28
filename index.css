@@ -146,6 +146,13 @@ header,
 
 .section-two-image-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.feature-item {
+    flex-basis: 220px;
+    flex-grow: 1;
 }
 
 .feature-image {

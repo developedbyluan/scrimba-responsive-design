@@ -513,3 +513,15 @@ In case of `flex-shrink: 0;`, it means the `random-image` will not shrink when t
        wrap onto multiple lines
     3. Apply a gap between each .feature-item
 */
+
+I remove the media query min-width: 480px, and use flexbox to achieve the same result.
+
+I set the `.section-two-image-container` to display: flex, which makes the `feature-items` to sit on the same row in every screen size.
+
+To make the `feature-item` to wrap onto multiple lines, I set the `flex-wrap: wrap;` to the `.section-two-image-container`. But now, `feature-items` take up the full width of the container all the time.
+
+So, I select the `feature-item` and set the `flex-basis` to 220px, which is the initial size of the `feature-item` before the remaining space is distributed. When there's enough space to more than one `feature-item`, the `feature-items` will sit on the same row in larger screens.
+
+However, the `feature-item` doesn't take up the remaining space of the container. To fix this, I set the `flex-grow` to 1, which means the `feature-item` will grow to fill the remaining space of the container.
+
+Finally I add some gap between each `feature-item` to make the layout more readable.
