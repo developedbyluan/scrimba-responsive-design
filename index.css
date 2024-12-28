@@ -15,6 +15,22 @@ body {
   margin: 0;
 }
 
+/* ----- TESTING IMAGE FLEXBOX GRID ----- */
+.image-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 0;
+    border: 1px solid tomato;
+}
+
+.random-image {
+    width: 220px;
+}
+
+.random-image img {
+    width: 100%;
+}
+
 /* ----- TYPOGRAPHY ----- */
 
 h1,

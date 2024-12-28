@@ -6,7 +6,6 @@ const toggleViewportMetaBtn = document.createElement("button")
 toggleViewportMetaBtn.classList.add("btn", "btn-dark", "btn-mid")
 toggleViewportMetaBtn.textContent = "Toggle Viewport Meta Tag"
 
-document.body.prepend(toggleViewportMetaBtn)
 
 window.addEventListener("resize", (e) => {
   mainImageSizeDisplay.textContent = mainImage.offsetWidth;

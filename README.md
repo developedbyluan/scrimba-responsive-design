@@ -471,3 +471,18 @@ So, in this case, max-width comes into rescue.
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 ```
+
+## Create a Flexbox Image Grid
+> rewatch the challenge: https://scrimba.com/the-frontend-developer-career-path-c0j/~0jg
+
+Starter code:
+```css
+.image-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 0;
+    border: 1px solid tomato;
+}
+```
+- Set `line-height: 0;` to remove the space between the images. Why does images have space between them? Because the images are inline elements, and inline elements have space between them, it's like text.
+
